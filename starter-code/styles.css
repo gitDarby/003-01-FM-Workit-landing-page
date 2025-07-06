@@ -19,6 +19,24 @@
    /* =============================
    2. VARIABLES
    ============================= */
+   :root {
+    --color-green: #44FFA1;
+    --color-dark-purple: #24053E;
+    --color-medium-purple: #584D62;
+    --color-light-purple: #FCF8FF;
+
+    --ff-headings: "Fraunces";
+    --ff-body: "Manrope";
+
+    --fs-80: 5rem;
+    --fs-56: 3.5rem;
+    --fs-32: 2rem;
+    --fs-18: 1.125rem;
+
+    --fw-600: 600;
+    --fw-400: 400;
+
+   }
 
 
    /* =============================
