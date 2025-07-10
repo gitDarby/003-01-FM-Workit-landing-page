@@ -57,6 +57,10 @@
     font-family: var(--ff-headings);
     font-weight: var(--fw-400);
    }
+
+   p {
+    font-family: var(--ff-body);
+   }
    
    .header {
     background-color: var(--color-dark-purple);
@@ -161,6 +165,7 @@
     color: #24053E;
     font-size: var(--fs-32);
     font-weight: 100;
+    font-family: var(--ff-headings);
     border: 1px solid #24053E;
     border-radius: 999px;
     width: 2.5rem;
@@ -268,25 +273,39 @@
     position: relative;
     top: 10rem;
     margin-top: -7rem;
+    margin-bottom: 13rem;
    }
 
    .description {
-    text-align: start
-   }
-   
-   .description-numbering {
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+  }
+
+  .description-numbering {
+    flex-shrink: 0;
+    margin: 2rem 1.5rem 0 0;
     text-align: center;
-   }
+    font-size: var(--fs-18);
+    font-weight: 500;
+    width: 3.2rem;
+    padding: .8rem;
+  }
 
-   .description-title {
-    display: inline;
-    text-align: start
-   }
+  .description-text {
+    display: flex;
+    flex-direction: column;
+  }
 
-   .description-content {
-    display: block;
-    text-align: start
-   }
+  .description-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .description-content {
+    line-height: 2rem;
+  }
    
 }
