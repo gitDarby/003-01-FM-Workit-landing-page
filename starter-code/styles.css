@@ -46,11 +46,15 @@
    ============================= */
    .wrapper {
     height: 100dvh;
-    overflow-x: hidden
+    overflow-x: hidden;
    }
    
    body {
     font-family: var(--ff-body);
+   }
+
+   section {
+    padding: 1rem;
    }
 
    h1, h2, h3 {
@@ -307,5 +311,45 @@
   .description-content {
     line-height: 2rem;
   }
+
+  .founder-wrapper {
+    position: relative;
+    width: 100%;
+    margin-left: -10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .founder-card {
+    position: absolute;
+    top: 30rem;
+    transform: translate(50%, -50%);
+    width: 30rem;
+    text-align: start;
+  }
+
+  .founder-btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    transform: translateX(-7rem);
+  }
+
+  .founder-spiral {
+    display: flex;
+    position: absolute;
+    bottom: -6rem;
+    left: 22rem;
+    transform: translateX(-50%);
+    width: 13rem;
+  }
+
+  footer {
+    margin-top: 20rem;
+  }
+
+  
    
 }
