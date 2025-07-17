@@ -19,7 +19,7 @@
   }
 
    /* =============================
-   2. VARIABLES
+   2. VARIABLES (Custom Properties)
    ============================= */
    :root {
     --color-green: #44FFA1;
@@ -30,370 +30,129 @@
     --ff-headings: "Fraunces", serif;
     --ff-body: "Manrope", sans-serif;
 
-    --fs-80: 5rem;
-    --fs-56: 3.5rem;
+    --fs-18: 1.25rem;
+    --fs-24: 1.5rem;
     --fs-32: 2rem;
-    --fs-18: 1.125rem;
+    --fs-56: 3.5rem;
+    --fs-64: 4rem;
+    --fs-80: 5rem;
 
-    --fw-600: 600;
-    --fw-400: 400;
-
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400; /* regular */
+    --fw-500: 500; /* medium */
+    --fw-600: 600; /* semi-bold */
+    --fw-700: 700; /* bold */
+    --fw-800: 800; /* extra bold */
    }
 
-
-   /* =============================
-   3. BASE STYLES
+/* =============================
+   3. BASE ELEMENT STYLES (body, img, a, ul, etc.)
    ============================= */
-   .wrapper {
-    height: 100dvh;
-    overflow-x: hidden;
-   }
-   
    body {
     font-family: var(--ff-body);
    }
 
-   section {
-    padding: 1rem;
+   a {
+    text-decoration: none;
+    color: white;
    }
 
-   h1, h2, h3 {
+   .header-logo {
+    width: 7.5rem;
+   }
+
+/* =============================
+   4. TYPOGRAPHY (text, headings, font rules)
+   ============================= */
+   h1,h2,h3 {
     font-family: var(--ff-headings);
+   }
+
+   .hero-title h1 {
+    color: white;
+    font-size: var(--fs-64);
     font-weight: var(--fw-400);
    }
 
-   p {
-    font-family: var(--ff-body);
-   }
-   
-   .header {
-    background-color: var(--color-dark-purple);
+   .hero-title h1 span {
+    border-bottom: .25rem solid var(--color-green);
+    padding-bottom: -.5rem;
    }
 
-   .hero-section {
-    background-color: var(--color-dark-purple);
-    width: 100%;
-    position: relative; /* <-- add this */
-    margin-bottom: 5rem;
+/* =============================
+   5. COMPONENTS (buttons, cards, etc.)
+   ============================= */
+   p a {
+    font-size: var(--fs-18);
+    border-bottom: .25rem solid var(--color-green);
+    padding-bottom: .40rem;
+    cursor: pointer;
+    transition: color .5s ease;
    }
 
-   button {
+   p a:hover {
+    color: var(--color-green);
+   }
+
+    button {
+    background-color: var(--color-green);
     color: var(--color-dark-purple);
     border: none;
-    background-color: var(--color-green);
-    padding: 1.2rem 2.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-    display: block;
-    margin: auto;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-600);
+    padding: 1rem 2rem;
     cursor: pointer;
+    transition: background-color .5s ease, color .5s ease;
    }
 
    button:hover {
-    color: #44FFA1;
-    border: 1px solid #44FFA1;
+    background-color: transparent;
+    color: var(--color-green);
+    border: .5px solid var(--color-green);
+   }
+
+/* =============================
+   6. LAYOUT (containers, flex/grid settings)
+   ============================= */
+   .container {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+   }
+   /* HEADER */
+   .header-container, .hero-container {
     background-color: var(--color-dark-purple);
    }
 
-
-   /* =============================
-   4. LAYOUT / COMPONENT STYLES
-   ============================= */
-
-   nav {
-    padding: 2rem 1.2rem;
-   }
-
-   nav ul {
+   .header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 1.25rem;
    }
-
-   .nav-logo {
-    width: 6rem;
-    display: inline;
-   }
-
-   nav ul li a {
-    color: white;
-    text-decoration: none;
-    list-style: none;
-    font-size: var(--fs-18);
-    font-weight: 500;
-    border-bottom: 3px solid var(--color-green);
-    padding-bottom: 7px;
-    cursor: pointer;
-   }
-   
-   nav ul li a:hover {
-    color: var(--color-green);
-   }
-
-   .header-left-spiral, .header-right-spiral, .founder-spiral {
-    display: none;
-   }
-
-   h1 {
-    color: white;
-    font-size: 2.5rem;
+   /* MAIN */
+   .main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
    }
 
-   h1 span {
-    border-bottom: 3px solid var(--color-green);
-
+   .hero-title {
+    margin-top: 2rem;
    }
 
-   .hero-btn {
+   .hero-button {
     margin-top: 2.5rem;
    }
 
-   .hero-img {
-    width: 20rem;
-    position: relative;
-    top: 5rem;
-    margin: auto;
-    margin-bottom: 10rem;
-   }
-
-   .description {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-family: var(--ff-headings);
-   }
-
-   .description-numbering {
-    color: #24053E;
-    font-size: var(--fs-32);
-    font-weight: 100;
-    font-family: var(--ff-headings);
-    border: 1px solid #24053E;
-    border-radius: 999px;
-    width: 2.5rem;
-    margin: auto;
-    margin-bottom: 1.5rem;
-   }
-
-   .description-title {
-    color: #24053E;
-    font-size: var(--fs-32);
-    margin-bottom: 1rem;
-   }
-
-   .description-content {
-    flood-color: #24053E;
-    font-weight: 300;
-   }
-   
-   .founder-img {
-    width: 16rem;
-    display: block;
-    margin: auto;
-    margin-top: 10rem;
-   }
-
-   .founder-card {
-    background-color: #24053E;
-    margin: auto;
-    padding: 1.5rem;
-    color: white;
-    text-align: center;
-    position: relative;
-    top: -2.5rem;
-    width: 20rem;
-   }
-
-
-   .founder-heading {
-    font-weight: 400;
-    margin: 1.5rem 0;
-   }
-
-   .founder-message {
-    font-weight: 300;
-    line-height: 2rem;
-   }
-
-   .founder-btn {
-    margin-top: 1.5rem;
-   }
-
-   .footer-logo {
-    width: 7rem;
-    text-align: center;
-    display: block;
-    margin: auto;
-   }
-
-   footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem;
-    gap: 2rem;
-   }
-
-   footer ul li {
-    width: 1.5rem;
-   }
-   
-
-      /* =============================
-   5. BREAKPOINT CHNAGES
+/* =============================
+   7. UTILITIES (helper classes if any)
    ============================= */
 
-   @media screen and (min-width: 768px) {
-    nav {
-        padding: 2rem 2rem;
-       }
-
-       h1 {
-        font-size: 3.5rem;
-       }
-
-    .header-left-spiral {
-        position: absolute;
-        width: 22rem;
-        display: inline;
-        left: -14.5rem;
-        top: .1rem;
-    }
-
-    .header-right-spiral {
-      position:absolute;
-      display: flex;
-      width: 11rem;
-      right: -5rem;
-      top: 10rem;
-      overflow: hidden;
-  }
-
-  .hero-img {
-    width: 30rem;
-    position: relative;
-    top: 10rem;
-    margin-top: -7rem;
-    margin-bottom: 13rem;
-   }
-
-   .description {
-    display: flex;
-    align-items: flex-start;
-    text-align: left;
-    gap: 2rem;
-    max-width: 40rem;
-    margin: 0 auto 2rem;
-  }
-
-  .description-numbering {
-    flex-shrink: 0;
-    margin: 2rem 1.5rem 0 0;
-    text-align: center;
-    font-size: var(--fs-18);
-    font-weight: 500;
-    width: 3.2rem;
-    padding: .8rem;
-  }
-
-  .description-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description-title {
-    margin-bottom: 1.5rem;
-  }
-
-  .description-content {
-    line-height: 2rem;
-  }
-
-  .founder-wrapper {
-    position: relative;
-    width: 100%;
-    margin-left: -10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .founder-card {
-    position: absolute;
-    top: 30rem;
-    transform: translate(50%, -50%);
-    width: 30rem;
-    text-align: start;
-  }
-
-  .founder-btn {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-    transform: translateX(-7rem);
-  }
-
-  .founder-spiral {
-    display: flex;
-    position: absolute;
-    bottom: -6rem;
-    left: 22rem;
-    transform: translateX(-50%);
-    width: 13rem;
-  }
-
-  footer {
-    margin-top: 20rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  nav {
-    padding: 2rem 5rem;
-   }
-
-   .header-left-spiral {
-    position: absolute;
-    width: 22rem;
-    display: inline;
-    left: -5rem;
-    top: .1rem;
-}
-
-.header-right-spiral {
-  position:absolute;
-  display: flex;
-  width: 11rem;
-  right: -2rem;
-  top: 10rem;
-  overflow: hidden;
-}
-
-.description-section {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  max-width: 300px;
-}
-
-.description-numbering {
-  margin-bottom: 1rem;
-}
-
-.description-title {
-  margin-bottom: 0.2rem;
-}
-}
+/* =============================
+   8. MEDIA QUERIES (breakpoints)
+  ============================= */

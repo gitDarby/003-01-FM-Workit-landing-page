@@ -20,153 +20,140 @@
     <title>Frontend Mentor | Workit landing page</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header id="site-header" class="header">
-        <nav id="site-nav" class="nav">
-          <ul>
-            <li>
-              <img
-                src="./assets/images/logo-light.svg"
-                alt="nav logo"
-                class="nav-logo"
-              />
-            </li>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header-section" id="header-section">
+        <div class="header-container">
+          <div class="header-logo">
+            <img
+              src="./assets/images/logo-light.svg"
+              alt="logo"
+              class="header-logo-img"
+            />
+          </div>
 
-            <li><a href="#" class="nav-btn">Apply for access</a></li>
-          </ul>
-        </nav>
+          <div class="header-button">
+            <p class="header-button-link">
+              <a href="#">Apply for access</a>
+            </p>
+          </div>
+        </div>
       </header>
 
-      <main id="site-main" class="main">
-        <!-- ========
-         HERO SECTION
-         ============ -->
-        <section id="site-hero-section" class="hero-section">
-          <img
-            src="./assets/images/bg-pattern-1.svg"
-            alt="spiral"
-            class="header-left-spiral"
-          />
-
-          <h1 class="site-title">
-            Data <span class="title-span">tailored</span> <br />to your needs.
-          </h1>
-
-          <img
-            src="./assets/images/bg-pattern-2.svg"
-            alt="spiral"
-            class="header-right-spiral"
-          />
-
-          <button class="hero-btn">Learn more</button>
-          <img src="./assets/images/image-hero.webp" alt="" class="hero-img" />
-        </section>
-
-        <!-- ========
-         DESCRIPTION SECTION
-         ============ -->
-        <section id="site-description-section" class="description-section">
-          <div class="description">
-            <p class="description-numbering">1</p>
-            <div class="description-text">
-              <h3 class="description-title">Actionable insights</h3>
-              <p class="description-content">
-                Optimize your products, improve customer satisfaction and stay
-                ahead of the competition with our product data analytics.
-              </p>
+      <!-- MAIN -->
+      <main class="main-section" id="main-section">
+        <div class="main-container">
+          <!-- HERO -->
+          <div class="hero-container">
+            <div class="hero-title">
+              <h1>Data <span>tailored</span> to your needs.</h1>
             </div>
-          </div>
 
-          <div class="description">
-            <p class="description-numbering">2</p>
-            <div class="description-text">
-              <h3 class="description-title">Data-driven decisions</h3>
-              <p class="description-content">
-                Make data-driven decisions with our product data analytics. Our
-                AI-generated reports help you unlock insights hidden in your
-                product data.
-              </p>
+            <div class="hero-button">
+              <button class="learn-more-btn">Learn more</button>
             </div>
-          </div>
 
-          <div class="description">
-            <p class="description-numbering">3</p>
-            <div class="description-text">
-              <h3 class="description-title">Always affordable</h3>
-              <p class="description-content">
-                Always affordable pricing that scales with your business. Get
-                top-quality product data analytics services without hidden costs
-                or unexpected fees.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========
-         DESCRIPTION SECTION
-         ============ -->
-        <section id="site-founder-section" class="founder-section">
-          <div class="founder-wrapper">
-            <img
-              src="./assets/images/image-founder.webp"
-              alt="founder headshot image"
-              class="founder-img"
-            />
-
-            <div class="founder-card">
-              <h2 class="founder-heading">Be the first to test</h2>
-              <p class="founder-message">
-                Hi, I'm Louis Graham, the founder of the company. Book a demo
-                call with me to become a beta tester for our app and kickstart
-                your company. Apply for access below and I’ll be in touch to
-                schedule a call.
-              </p>
-
-              <button class="founder-btn">Apply for access</button>
+            <div class="hero-graphic">
               <img
-                src="./assets/images/bg-pattern-3.svg"
-                alt="spiral"
-                class="founder-spiral"
+                src="./assets/images/image-hero.webp"
+                alt="mobile phone"
+                class="hero-img"
               />
             </div>
           </div>
-        </section>
+
+          <!-- DESCRIPTION -->
+          <div class="description-container">
+            <!-- Actionable insights -->
+            <div class="description-item">
+              <div class="description-number"><p>1</p></div>
+              <div class="description-title"><h3>Actionable insights</h3></div>
+              <div class="description-text">
+                <p>
+                  Optimize your products, improve customer satisfaction and stay
+                  ahead of the competition with our product data analytics.
+                </p>
+              </div>
+            </div>
+
+            <!-- Data-driven decisions -->
+            <div class="description-item">
+              <div class="description-number"><p>2</p></div>
+              <div class="description-title">
+                <h3>Data-driven decisions</h3>
+              </div>
+              <div class="description-text">
+                <p>
+                  Make data-driven decisions with our product data analytics.
+                  Our AI-generated reports help you unlock insights hidden in
+                  your product data.
+                </p>
+              </div>
+            </div>
+
+            <!-- Always affordable -->
+            <div class="description-item">
+              <div class="description-number"><p>3</p></div>
+              <div class="description-title"><h3>Always affordable</h3></div>
+              <div class="description-text">
+                <p>
+                  Always affordable pricing that scales with your business. Get
+                  top-quality product data analytics services without hidden
+                  costs or unexpected fees.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOUNDER -->
+          <div class="founder-container">
+            <div class="founder-image">
+              <img
+                src="./assets/images/image-founder.webp"
+                alt="founder profile picture"
+                class="founder-img"
+              />
+            </div>
+
+            <div class="founder-box">
+              <div class="founder-title">
+                <h2>Be the first to test</h2>
+              </div>
+
+              <div class="founder-text">
+                <p>
+                  Hi, I'm Louis Graham, the founder of the company. Book a demo
+                  call with me to become a beta tester for our app and kickstart
+                  your company. Apply for access below and I’ll be in touch to
+                  schedule a call.
+                </p>
+              </div>
+
+              <div class="founder-button">
+                <button class="founder-btn">Apply for access</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
-      <footer>
-        <img
-          src="./assets/images/logo-dark.svg"
-          alt="logo"
-          class="footer-logo"
-        />
-        <ul>
-          <li>
-            <a href="#" class="facebook-icon-link"
-              ><img
-                src="./assets/images/icon-facebook.svg"
-                alt="facebook"
-                class="facebook-icon"
-            /></a>
-          </li>
+      <!-- FOOTER -->
+      <footer class="footer-section" id="footer-section">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img
+              src="./assets/images/logo-dark.svg"
+              alt="logo"
+              class="footer-logo-img"
+            />
+          </div>
 
-          <li>
-            <a href="#" class="twitter-icon-link"
-              ><img
-                src="./assets/images/icon-twitter.svg"
-                alt="twitter"
-                class="twitter-icon"
-            /></a>
-          </li>
-
-          <li>
-            <a href="#" class="instagram-icon-link"
-              ><img
-                src="./assets/images/icon-instagram.svg"
-                alt="instagram"
-                class="instagram-icon"
-            /></a>
-          </li>
-        </ul>
+          <div class="footer-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
       </footer>
     </div>
   </body>
