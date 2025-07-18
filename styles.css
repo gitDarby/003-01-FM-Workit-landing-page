@@ -30,6 +30,7 @@
     --ff-headings: "Fraunces", serif;
     --ff-body: "Manrope", sans-serif;
 
+    --fs-14: 1rem;
     --fs-18: 1.25rem;
     --fs-24: 1.5rem;
     --fs-32: 2rem;
@@ -62,6 +63,28 @@
     width: 7.5rem;
    }
 
+   .hero-graphic {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6rem;
+    width: 24rem;
+    z-index: 1;
+   }
+
+   .founder-image {
+    display: block;
+    margin: auto;
+    width: 20rem;
+   }
+
+   .footer-logo {
+    width: 8rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+   }
+
 /* =============================
    4. TYPOGRAPHY (text, headings, font rules)
    ============================= */
@@ -69,9 +92,15 @@
     font-family: var(--ff-headings);
    }
 
+   .hero-title {
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
+   }
+
    .hero-title h1 {
     color: white;
-    font-size: var(--fs-64);
+    font-size: var(--fs-56);
     font-weight: var(--fw-400);
    }
 
@@ -80,9 +109,54 @@
     padding-bottom: -.5rem;
    }
 
+   /* DESCRIPTION */
+   
+  .description-number {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-400);
+    border: .1rem solid var(--color-dark-purple);
+    padding: .5rem;
+    width: 2.75rem;
+    border-radius: 999px;
+  }
+  
+  .description-title  h3{
+    color: var(--color-dark-purple);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-24);
+  }
+
+  .description-title {
+    padding: 1.65rem 0 1rem;
+  }
+   
+   .description-text p {
+    line-height: 1.75rem;
+    font-weight: var(--fw-300);
+    color: var(--color-dark-purple);
+  }
+
+  /* FOUNDER */
+
+  .founder-title h2 {
+    margin-top: -.5rem;
+    padding-bottom: 2rem;
+    font-size: var(--fs-32);
+    font-weight: var(--fw-400);
+  }
+
+  .founder-text p {
+    line-height: 1.75rem;
+    font-weight: var(--fw-300);
+    padding-bottom: 2rem;
+  }
+
 /* =============================
    5. COMPONENTS (buttons, cards, etc.)
    ============================= */
+
+   /* HEADER */
    p a {
     font-size: var(--fs-18);
     border-bottom: .25rem solid var(--color-green);
@@ -94,6 +168,8 @@
    p a:hover {
     color: var(--color-green);
    }
+
+   /* HERO */
 
     button {
     background-color: var(--color-green);
@@ -110,6 +186,10 @@
     background-color: transparent;
     color: var(--color-green);
     border: .5px solid var(--color-green);
+   }
+
+   .hero-button {
+    padding: 2rem 0 4rem;
    }
 
 /* =============================
@@ -134,19 +214,72 @@
    }
    /* MAIN */
    .main-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
    }
 
-   .hero-title {
-    margin-top: 2rem;
+   /* HERO */
+
+   .hero-container {
+    height: 30rem;
+    position: relative;
    }
 
-   .hero-button {
-    margin-top: 2.5rem;
+   /* DESCRIPTION */
+
+   .description-container {
+    padding: 8rem 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  /* FOUNDER */
+
+  .founder-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 15rem;
+  }
+
+  .founder-box {
+    color: white;
+    padding: 2rem;
+    background-color: var(--color-dark-purple);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -16.5rem;
+    width: 24rem;
+    z-index: 1;
+  }
+
+   /* FOOTER */
+   footer {
+    margin-top: 3rem;
+    text-align: center;
+   }
+
+   .footer-container {
+    display: block;
+    padding: 3rem;
+   }
+
+   .footer-icons {
+    color: var(--color-medium-purple);
+   }
+
+   .footer-icons i {
+    padding: 1rem;
+    font-size: var(--fs-32);
+    cursor: pointer;
    }
 
 /* =============================
