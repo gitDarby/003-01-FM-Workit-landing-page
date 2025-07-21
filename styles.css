@@ -7,10 +7,14 @@
     box-sizing: border-box;
   }
 
-  img {
+  /* img {
     width: 100%;
     display: block;
     overflow: hidden;
+  } */
+
+  a {
+    text-decoration: none;
   }
 
   ul li {
@@ -36,6 +40,7 @@
     --fs-32: 2rem;
     --fs-56: 3.5rem;
     --fs-64: 4rem;
+    --fs-72: 4.75rem;
     --fs-80: 5rem;
 
     --fw-200: 200;
@@ -50,242 +55,1654 @@
 /* =============================
    3. BASE ELEMENT STYLES (body, img, a, ul, etc.)
    ============================= */
-   body {
-    font-family: var(--ff-body);
-   }
-
-   a {
-    text-decoration: none;
-    color: white;
-   }
-
-   .header-logo {
-    width: 7.5rem;
-   }
-
-   .hero-graphic {
+   /* header */
+   .hero-img {
+    display: block;
+    width: 715px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -6rem;
-    width: 24rem;
-    z-index: 1;
+    top: 80%;
+    left: 33%;
+    z-index: 5;
    }
 
-   .founder-image {
-    display: block;
-    margin: auto;
-    width: 20rem;
-   }
 
-   .footer-logo {
-    width: 8rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-   }
 
 /* =============================
    4. TYPOGRAPHY (text, headings, font rules)
    ============================= */
-   h1,h2,h3 {
+   p {
+    line-height: 1.6;
+   }
+
+   h1, h2, h3 {
     font-family: var(--ff-headings);
    }
 
-   .hero-title {
-    display: block;
-    margin: auto;
-    padding-top: 2rem;
+   p, a {
+    font-size: 18px;
+    font-family: var(--ff-body);
    }
 
-   .hero-title h1 {
-    color: white;
-    font-size: var(--fs-56);
-    font-weight: var(--fw-400);
-   }
+   /* -----  HEADER  ----- */
 
-   .hero-title h1 span {
-    border-bottom: .25rem solid var(--color-green);
-    padding-bottom: -.5rem;
-   }
 
-   /* DESCRIPTION */
-   
-  .description-number {
-    font-family: var(--ff-headings);
-    font-size: var(--fs-18);
-    font-weight: var(--fw-400);
-    border: .1rem solid var(--color-dark-purple);
-    padding: .5rem;
-    width: 2.75rem;
-    border-radius: 999px;
-  }
-  
-  .description-title  h3{
-    color: var(--color-dark-purple);
-    font-weight: var(--fw-400);
-    font-size: var(--fs-24);
-  }
-
-  .description-title {
-    padding: 1.65rem 0 1rem;
-  }
-   
-   .description-text p {
-    line-height: 1.75rem;
+   .header-text h1 {
+    text-align: center;
+    font-size: var(--fs-80);
+    width: 40%;
     font-weight: var(--fw-300);
-    color: var(--color-dark-purple);
-  }
+    margin: 0 auto;
+    line-height: 1;
+   }
 
-  /* FOUNDER */
+   .text-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--color-green);
+   }
 
-  .founder-title h2 {
-    margin-top: -.5rem;
-    padding-bottom: 2rem;
-    font-size: var(--fs-32);
-    font-weight: var(--fw-400);
-  }
+   /* -----  MAIN  ----- */
 
-  .founder-text p {
-    line-height: 1.75rem;
-    font-weight: var(--fw-300);
-    padding-bottom: 2rem;
-  }
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
 
 /* =============================
    5. COMPONENTS (buttons, cards, etc.)
    ============================= */
-
-   /* HEADER */
-   p a {
-    font-size: var(--fs-18);
-    border-bottom: .25rem solid var(--color-green);
-    padding-bottom: .40rem;
-    cursor: pointer;
-    transition: color .5s ease;
-   }
-
-   p a:hover {
-    color: var(--color-green);
-   }
-
-   /* HERO */
-
-    button {
+   /* -----  HEADER  ----- */
+   .header-btn {
+    display: block;
+    margin: 3rem auto;
     background-color: var(--color-green);
     color: var(--color-dark-purple);
-    border: none;
     font-size: var(--fs-18);
-    font-weight: var(--fw-600);
-    padding: 1rem 2rem;
+    font-weight: var(--fw-800);
+    border: none;
+    height: 60px;
+    width: 160px;
+    transition: background-color .4s ease, color .4s ease;
     cursor: pointer;
-    transition: background-color .5s ease, color .5s ease;
    }
 
-   button:hover {
+   .header-btn:hover {
     background-color: transparent;
     color: var(--color-green);
-    border: .5px solid var(--color-green);
+    border: 1px solid var(--color-green);
    }
 
-   .hero-button {
-    padding: 2rem 0 4rem;
-   }
+   /* -----  MAIN  ----- */
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
 
 /* =============================
    6. LAYOUT (containers, flex/grid settings)
    ============================= */
    .container {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
+    width: 95%; /**gives padding on the sides**/
+    max-width: 1440px;
+    margin: auto; /**center everything**/
    }
-   /* HEADER */
-   .header-container, .hero-container {
+
+   /* -----  HEADER  ----- */
+   header {
     background-color: var(--color-dark-purple);
-   }
-
-   .header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 1.25rem;
-   }
-   /* MAIN */
-   .main-container{
-    text-align: center;
-   }
-
-   /* HERO */
-
-   .hero-container {
-    height: 30rem;
+    height: 600px;
     position: relative;
-   }
-
-   /* DESCRIPTION */
-
-   .description-container {
-    padding: 8rem 1.25rem 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description-item {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-  }
-
-  /* FOUNDER */
-
-  .founder-container {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    position: relative;
-    margin-bottom: 15rem;
-  }
-
-  .founder-box {
     color: white;
-    padding: 2rem;
-    background-color: var(--color-dark-purple);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -16.5rem;
-    width: 24rem;
+    /* background images */
+    background-image: url(./assets/images/bg-pattern-1.svg), url(./assets/images/bg-pattern-2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -3vw 11vh, 97vw 28vh ;
     z-index: 1;
-  }
-
-   /* FOOTER */
-   footer {
-    margin-top: 3rem;
-    text-align: center;
    }
 
-   .footer-container {
+   /* navigation */
+   .header-nav {
+    display: flex;
+    align-items: center; /*aligns vertically*/
+    justify-content: space-between;
+    padding-top: 3rem;
+   }
+
+   .header-nav a {
+    color: white;
+    font-size: var(--fs-18);
+    transition: color .4s ease;
+   }
+
+   .header-nav a:hover {
+    color: var(--color-green);
+   }
+
+   .green-underline {
+    background-color: var(--color-green);
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+   }
+
+   .header-text {
+    margin-top: 5rem;
+   }
+
+   /* header wave curve */
+   .hero-wave {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+  .hero-wave svg {
+    position: relative;
     display: block;
-    padding: 3rem;
-   }
+    width: calc(283% + 1.3px);
+    height: 132px;
+}
 
-   .footer-icons {
-    color: var(--color-medium-purple);
-   }
+  .hero-wave .shape-fill {
+    fill: var(--color-dark-purple);
+}
 
-   .footer-icons i {
-    padding: 1rem;
-    font-size: var(--fs-32);
+   /* -----  MAIN  ----- */
+
+   #features {
+    background-color: var(--color-light-purple);
+    height: 100%;
+    position: relative;
+    margin-top: 1rem;
+ }
+
+ .features-fill {
+  fill: var(--color-light-purple);
+ }
+
+ .features-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25rem;
+  padding-bottom: 8rem;
+ }
+
+ .feature {
+  text-align: center;
+  padding: 0 3rem;
+ }
+
+ .feature-number {
+  height: 56px;
+  width: 56px;
+  border: 1px solid var(--color-dark-purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem auto 4rem auto;
+ }
+
+ .feature-number {
+  color: var(--color-dark-purple);
+ }
+
+ .feature h2 {
+  font-size: var(--fs-32);
+  margin-bottom: 2rem;
+  color: var(--color-dark-purple);
+  font-weight: var(--fw-500);
+ }
+
+ .feature p {
+  color: var(--color-medium-purple);
+ }
+
+
+
+
+
+ #founder {
+  margin-top: 25rem;
+  margin-bottom: 10rem;
+ }
+
+ .founder-flex-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .founder-img {
+  width: 477px;
+  height: 477px;
+  margin-top: -20rem;
+  margin-right: -7rem;
+ }
+
+ .access-card {
+  background-color: var(--color-dark-purple);
+  color: white;
+  height: 413px;
+  width: 730px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ }
+
+ .access-card-content {
+  padding: 0rem 4rem;
+ }
+
+ .access-card-content h2 {
+  font-size: var(--fs-56);
+  padding-bottom: 2rem;
+ }
+
+ .access-card-content p {
+  margin-bottom: 1.5rem;
+ }
+
+ .founder-btn {
+  display: block;
+    background-color: var(--color-green);
+    color: var(--color-dark-purple);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-800);
+    border: none;
+    height: 60px;
+    width: 190px;
+    transition: background-color .4s ease, color .4s ease;
     cursor: pointer;
-   }
+ }
+
+ .founder-btn:hover {
+  background-color: transparent;
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+ }
+
+ .founder-circles {
+  position: absolute;
+  top: 68%;
+  left: 60%;
+ }
+ 
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
+
+
 
 /* =============================
    7. UTILITIES (helper classes if any)
    ============================= */
-
 /* =============================
    8. MEDIA QUERIES (breakpoints)
   ============================= */
+  @media screen and (max-width:1368px) {
+    /* -----  HEADER  ----- */
+    .hero-img {
+      left: 24%;
+     }
+  
+     header {
+      background-position: -10vw 23vh, 92vw 28vh ;
+     }
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     4. TYPOGRAPHY (text, headings, font rules)
+     ============================= */
+     /* -----  HEADER  ----- */
+     .header-text h1 {
+      width: 45%;
+     }
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     5. COMPONENTS (buttons, cards, etc.)
+     ============================= */
+  
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     6. LAYOUT (containers, flex/grid settings)
+     ============================= */
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* smaller laptops */
+  @media screen and (max-width:1280px) {
+  /* -----  HEADER  ----- */
+  .hero-img {
+    left: 22%;
+   }
+
+   header {
+    background-position: -10vw 23vh, 92vw 28vh ;
+   }
+   /* -----  MAIN  ----- */
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
+
+/* =============================
+   4. TYPOGRAPHY (text, headings, font rules)
+   ============================= */
+   /* -----  HEADER  ----- */
+   .header-text h1 {
+    width: 50%;
+   }
+
+   /* -----  MAIN  ----- */
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
+
+/* =============================
+   5. COMPONENTS (buttons, cards, etc.)
+   ============================= */
+
+
+
+
+   /* -----  HEADER  ----- */
+
+   /* -----  MAIN  ----- */
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+
+
+
+/* =============================
+   6. LAYOUT (containers, flex/grid settings)
+   ============================= */
+
+
+
+   /* -----  HEADER  ----- */
+
+   /* -----  MAIN  ----- */
+
+   /*hero*/
+
+   /*description*/
+
+   /*founder*/
+
+   /* -----  FOOTER  ----- */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* smaller laptops */
+  @media screen and (max-width:1024px) {
+    /* -----  HEADER  ----- */
+    header {
+      background-position: -18vw 14vh, 93vw 26vh ;
+      height: 530px;
+    }
+    .hero-img {
+      top: 93%;
+      left: 15%;
+      width: 600px;
+     }
+
+     /* -----  MAIN  ----- */
+     .features-flex-container {
+      display: block;
+      padding-top: 25rem;
+      padding-bottom: 2rem;
+     }
+    
+     .feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 0rem;
+      margin: 2rem auto;
+      width: 70%;
+     }
+    
+     .feature-number {
+      height: 56px;
+      width: 100px;
+      border: 1px solid var(--color-dark-purple);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 3rem;
+      margin-top: 1rem;
+     }
+
+     .feature h2 {
+      margin-bottom: 1rem;
+     }
+
+     .feature p {
+      color: var(--color-medium-purple);
+     }
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     4. TYPOGRAPHY (text, headings, font rules)
+     ============================= */
+     /* -----  HEADER  ----- */
+     .header-text h1 {
+      width: 50%;
+     }
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     5. COMPONENTS (buttons, cards, etc.)
+     ============================= */
+  
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     6. LAYOUT (containers, flex/grid settings)
+     ============================= */
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* phones */
+  @media screen and (max-width: 915px) {
+    /* -----  HEADER  ----- */
+    header {
+      background-position: -18vw 14vh, 93vw 26vh ;
+      height: 550px;
+    }
+    .hero-img {
+      top: 85%;
+      left: 15%;
+     }
+
+     /* -----  MAIN  ----- */
+
+     .features-flex-container {
+      display: block;
+      padding-top: 17rem;
+      padding-bottom: 1rem;
+     }
+    
+     .feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 0rem;
+      margin: 2rem auto;
+      width: 95%;
+     }
+    
+     .feature-number {
+      height: 56px;
+      width: 107.5px;
+      border: 1px solid var(--color-dark-purple);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 3rem;
+      margin-top: 3rem;
+     }
+
+     .feature h2 {
+      margin-bottom: 1rem;
+     }
+
+     .feature p {
+      color: var(--color-medium-purple);
+     }
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     4. TYPOGRAPHY (text, headings, font rules)
+     ============================= */
+     /* -----  HEADER  ----- */
+     .header-text h1 {
+      width: 60%;
+      font-size: var(--fs-64);
+     }
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     5. COMPONENTS (buttons, cards, etc.)
+     ============================= */
+  
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+  
+  
+  
+  /* =============================
+     6. LAYOUT (containers, flex/grid settings)
+     ============================= */
+  
+  
+  
+     /* -----  HEADER  ----- */
+  
+     /* -----  MAIN  ----- */
+  
+     /*hero*/
+  
+     /*description*/
+  
+     /*founder*/
+  
+     /* -----  FOOTER  ----- */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 768px) {
+      /* -----  HEADER  ----- */
+      header {
+        background-position: -26vw 14vh, 89vw 32vh ;
+        height: 550px;
+      }
+      .hero-img {
+        top: 85%;
+        left: 15%;
+       }
+  
+       /* -----  MAIN  ----- */
+
+       .features-flex-container {
+        display: block;
+        padding-top: 17rem;
+        padding-bottom: 1rem;
+       }
+      
+       .feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        padding: 0rem;
+        margin: 2rem auto;
+        width: 90%;
+       }
+      
+       .feature-number {
+        height: 56px;
+        width: 107.5px;
+        border: 1px solid var(--color-dark-purple);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3rem;
+        margin-top: 3rem;
+       }
+  
+       .feature h2 {
+        margin-bottom: 1rem;
+       }
+  
+       .feature p {
+        color: var(--color-medium-purple);
+       }
+    
+       /*hero*/
+    
+       /*description*/
+    
+       /*founder*/
+    
+       /* -----  FOOTER  ----- */
+    
+    
+    
+    /* =============================
+       4. TYPOGRAPHY (text, headings, font rules)
+       ============================= */
+       /* -----  HEADER  ----- */
+       .header-text h1 {
+        width: 60%;
+        font-size: var(--fs-64);
+       }
+    
+       /* -----  MAIN  ----- */
+    
+       /*hero*/
+    
+       /*description*/
+    
+       /*founder*/
+    
+       /* -----  FOOTER  ----- */
+
+
+       
+    
+    
+    
+    /* =============================
+       5. COMPONENTS (buttons, cards, etc.)
+       ============================= */
+    
+    
+    
+    
+       /* -----  HEADER  ----- */
+    
+       /* -----  MAIN  ----- */
+    
+       /*hero*/
+    
+       /*description*/
+    
+       /*founder*/
+    
+       /* -----  FOOTER  ----- */
+    
+    
+    
+    /* =============================
+       6. LAYOUT (containers, flex/grid settings)
+       ============================= */
+    
+    
+    
+       /* -----  HEADER  ----- */
+    
+       /* -----  MAIN  ----- */
+    
+       /*hero*/
+    
+       /*description*/
+    
+       /*founder*/
+    
+       /* -----  FOOTER  ----- */
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media screen and (max-width: 768px) {
+        /* -----  HEADER  ----- */
+        header {
+          background-position: -26vw 14vh, 89vw 32vh ;
+          height: 550px;
+        }
+        .hero-img {
+          top: 85%;
+          left: 15%;
+         }
+    
+         /* -----  MAIN  ----- */
+      
+         /*hero*/
+      
+         /*description*/
+      
+         /*founder*/
+      
+         /* -----  FOOTER  ----- */
+      
+      
+      
+      /* =============================
+         4. TYPOGRAPHY (text, headings, font rules)
+         ============================= */
+         /* -----  HEADER  ----- */
+         .header-text h1 {
+          width: 60%;
+          font-size: var(--fs-64);
+         }
+      
+         /* -----  MAIN  ----- */
+      
+         /*hero*/
+      
+         /*description*/
+      
+         /*founder*/
+      
+         /* -----  FOOTER  ----- */
+      
+      
+      
+      /* =============================
+         5. COMPONENTS (buttons, cards, etc.)
+         ============================= */
+      
+      
+      
+      
+         /* -----  HEADER  ----- */
+      
+         /* -----  MAIN  ----- */
+      
+         /*hero*/
+      
+         /*description*/
+      
+         /*founder*/
+      
+         /* -----  FOOTER  ----- */
+      
+      
+      
+      /* =============================
+         6. LAYOUT (containers, flex/grid settings)
+         ============================= */
+      
+      
+      
+         /* -----  HEADER  ----- */
+      
+         /* -----  MAIN  ----- */
+      
+         /*hero*/
+      
+         /*description*/
+      
+         /*founder*/
+      
+         /* -----  FOOTER  ----- */
+
+
+
+
+
+
+
+
+         #founder {
+          margin-top: 25rem;
+          margin-bottom: 10rem;
+         }
+        
+         .founder-flex-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+         }
+        
+         .founder-img {
+          width: 477px;
+          height: 477px;
+          margin-top: -20rem;
+          margin-right: -7rem;
+         }
+        
+         .access-card {
+          background-color: var(--color-dark-purple);
+          color: white;
+          height: 413px;
+          width: 730px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+         }
+        
+         .access-card-content {
+          padding: 0rem 4rem;
+         }
+        
+         .access-card-content h2 {
+          font-size: var(--fs-56);
+          padding-bottom: 2rem;
+         }
+        
+         .access-card-content p {
+          margin-bottom: 1.5rem;
+         }
+        
+         .founder-btn {
+          display: block;
+            background-color: var(--color-green);
+            color: var(--color-dark-purple);
+            font-size: var(--fs-18);
+            font-weight: var(--fw-800);
+            border: none;
+            height: 60px;
+            width: 190px;
+            transition: background-color .4s ease, color .4s ease;
+            cursor: pointer;
+         }
+        
+         .founder-btn:hover {
+          background-color: transparent;
+          color: var(--color-green);
+          border: 1px solid var(--color-green);
+         }
+        
+         .founder-circles {
+          position: absolute;
+          top: 68%;
+          left: 60%;
+         }
+        }
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width: 698px) {
+          /* -----  HEADER  ----- */
+          header {
+            background-image: none;
+            height: 500px;
+          }
+          .hero-img {
+            width: 400px;
+            top: 90%;
+            left: 18%;
+           }
+      
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+        
+        
+        
+        /* =============================
+           4. TYPOGRAPHY (text, headings, font rules)
+           ============================= */
+           /* -----  HEADER  ----- */
+           .header-text h1 {
+            width: 70%;
+            font-size: var(--fs-56);
+           }
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+
+        
+        /* =============================
+           5. COMPONENTS (buttons, cards, etc.)
+           ============================= */
+        
+        
+        
+        
+           /* -----  HEADER  ----- */
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+        
+        
+        
+        /* =============================
+           6. LAYOUT (containers, flex/grid settings)
+           ============================= */
+        
+        
+        
+           /* -----  HEADER  ----- */
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width: 663px) {
+          /* -----  HEADER  ----- */
+          header {
+            background-image: none;
+            height: 500px;
+          }
+          .hero-img {
+            width: 400px;
+            top: 90%;
+            left: 18%;
+           }
+      
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+        
+        
+        
+        /* =============================
+           4. TYPOGRAPHY (text, headings, font rules)
+           ============================= */
+           /* -----  HEADER  ----- */
+           .header-text h1 {
+            width: 70%;
+            font-size: var(--fs-56);
+           }
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+        
+        
+        
+        /* =============================
+           5. COMPONENTS (buttons, cards, etc.)
+           ============================= */
+        
+        
+        
+        
+           /* -----  HEADER  ----- */
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+        
+        
+        
+        /* =============================
+           6. LAYOUT (containers, flex/grid settings)
+           ============================= */
+        
+        
+        
+           /* -----  HEADER  ----- */
+        
+           /* -----  MAIN  ----- */
+        
+           /*hero*/
+        
+           /*description*/
+        
+           /*founder*/
+        
+           /* -----  FOOTER  ----- */
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+          @media screen and (max-width: 450px) {
+            /* -----  HEADER  ----- */
+
+            .hero-img {
+              width: 300px;
+              top: 95%;
+  
+             }
+        
+             /* -----  MAIN  ----- */
+          
+             /*hero*/
+          
+             /*description*/
+          
+             /*founder*/
+          
+             /* -----  FOOTER  ----- */
+          
+          
+          
+          /* =============================
+             4. TYPOGRAPHY (text, headings, font rules)
+             ============================= */
+             /* -----  HEADER  ----- */
+             .header-text h1 {
+              width: 100%;
+             }
+          
+             /* -----  MAIN  ----- */
+          
+             /*hero*/
+          
+             /*description*/
+          
+             /*founder*/
+          
+             /* -----  FOOTER  ----- */
+          
+          
+          
+          /* =============================
+             5. COMPONENTS (buttons, cards, etc.)
+             ============================= */
+          
+          
+          
+          
+             /* -----  HEADER  ----- */
+          
+             /* -----  MAIN  ----- */
+          
+             /*hero*/
+          
+             /*description*/
+          
+             /*founder*/
+          
+             /* -----  FOOTER  ----- */
+          
+          
+          
+          /* =============================
+             6. LAYOUT (containers, flex/grid settings)
+             ============================= */
+          
+          
+          
+             /* -----  HEADER  ----- */
+          
+             /* -----  MAIN  ----- */
+          
+             /*hero*/
+          
+             /*description*/
+          
+             /*founder*/
+          
+             /* -----  FOOTER  ----- */
+            }
+
+
+
+
+
+
+
+
+            @media screen and (max-width: 390px) {
+              /* -----  HEADER  ----- */
+  
+              .hero-img {
+                width: 300px;
+                top: 95%;
+    
+               }
+          
+               /* -----  MAIN  ----- */
+            
+               /*hero*/
+            
+               /*description*/
+            
+               /*founder*/
+            
+               /* -----  FOOTER  ----- */
+
+            
+            /* =============================
+               4. TYPOGRAPHY (text, headings, font rules)
+               ============================= */
+               /* -----  HEADER  ----- */
+               .header-text h1 {
+                font-size: 45px;
+               }
+            
+               /* -----  MAIN  ----- */
+
+               .features-flex-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10rem;
+                padding-bottom: 1rem;
+               }
+              
+               .feature {
+                display: block;
+                text-align: center;
+                padding: 0rem;
+               }
+              
+               .feature-number {
+                height: 56px;
+                width: 56px;
+                border: 1px solid var(--color-dark-purple);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 3rem auto;
+               }
+          
+               .feature h2 {
+                margin-bottom: 1rem;
+               }
+          
+               .feature p {
+                color: var(--color-medium-purple);
+               }
+            
+               /*hero*/
+            
+               /*description*/
+            
+               /*founder*/
+            
+               /* -----  FOOTER  ----- */
+            
+            
+            
+            /* =============================
+               5. COMPONENTS (buttons, cards, etc.)
+               ============================= */
+            
+            
+            
+            
+               /* -----  HEADER  ----- */
+            
+               /* -----  MAIN  ----- */
+            
+               /*hero*/
+            
+               /*description*/
+            
+               /*founder*/
+            
+               /* -----  FOOTER  ----- */
+            
+            
+            
+            /* =============================
+               6. LAYOUT (containers, flex/grid settings)
+               ============================= */
+            
+            
+            
+               /* -----  HEADER  ----- */
+            
+               /* -----  MAIN  ----- */
+            
+               /*hero*/
+            
+               /*description*/
+            
+               /*founder*/
+            
+               /* -----  FOOTER  ----- */
+              }
+
+
+
+
+
+
+
+
+
+
+
+              @media screen and (max-width: 320px) {
+                /* -----  HEADER  ----- */
+
+                header {
+                  height: 420px;
+                }
+    
+                .hero-img {
+                  width: 250px;
+                  top: 100%;
+                  left: 10%;
+                 }
+            
+                 /* -----  MAIN  ----- */
+              
+                 /*hero*/
+              
+                 /*description*/
+              
+                 /*founder*/
+              
+                 /* -----  FOOTER  ----- */
+
+
+
+
+
+              
+              
+              
+              /* =============================
+                 4. TYPOGRAPHY (text, headings, font rules)
+                 ============================= */
+                 /* -----  HEADER  ----- */
+                 .header-text h1 {
+                  font-size: 40px;
+                 }
+              
+                 /* -----  MAIN  ----- */
+              
+                 /*hero*/
+              
+                 /*description*/
+              
+                 /*founder*/
+              
+                 /* -----  FOOTER  ----- */
+              
+              
+              
+              /* =============================
+                 5. COMPONENTS (buttons, cards, etc.)
+                 ============================= */
+              
+              
+              
+              
+                 /* -----  HEADER  ----- */
+              
+                 /* -----  MAIN  ----- */
+              
+                 /*hero*/
+              
+                 /*description*/
+              
+                 /*founder*/
+              
+                 /* -----  FOOTER  ----- */
+              
+              
+              
+              /* =============================
+                 6. LAYOUT (containers, flex/grid settings)
+                 ============================= */
+              
+              
+              
+                 /* -----  HEADER  ----- */
+              
+                 /* -----  MAIN  ----- */
+              
+                 /*hero*/
+              
+                 /*description*/
+              
+                 /*founder*/
+              
+                 /* -----  FOOTER  ----- */
+                }
+
+
+
+
+
+
+                @media screen and (max-width: 280px) {
+                  /* -----  HEADER  ----- */
+  
+                  header {
+                    height: 420px;
+                  }
+      
+                  .hero-img {
+                    width: 250px;
+                    top: 100%;
+                    left: 10%;
+                   }
+              
+                   /* -----  MAIN  ----- */
+                
+                   /*hero*/
+                
+                   /*description*/
+                
+                   /*founder*/
+                
+                   /* -----  FOOTER  ----- */
+                
+                
+                
+                /* =============================
+                   4. TYPOGRAPHY (text, headings, font rules)
+                   ============================= */
+                   /* -----  HEADER  ----- */
+                   .header-text h1 {
+                    font-size: 35px;
+                   }
+                
+                   /* -----  MAIN  ----- */
+                
+                   /*hero*/
+                
+                   /*description*/
+                
+                   /*founder*/
+                
+                   /* -----  FOOTER  ----- */
+                
+                
+                
+                /* =============================
+                   5. COMPONENTS (buttons, cards, etc.)
+                   ============================= */
+                
+                
+                
+                
+                   /* -----  HEADER  ----- */
+                
+                   /* -----  MAIN  ----- */
+                
+                   /*hero*/
+                
+                   /*description*/
+                
+                   /*founder*/
+                
+                   /* -----  FOOTER  ----- */
+                
+                
+                
+                /* =============================
+                   6. LAYOUT (containers, flex/grid settings)
+                   ============================= */
+                
+                
+                
+                   /* -----  HEADER  ----- */
+                
+                   /* -----  MAIN  ----- */
+                
+                   /*hero*/
+                
+                   /*description*/
+                
+                   /*founder*/
+                
+                   /* -----  FOOTER  ----- */
+                  }
