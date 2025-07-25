@@ -24,84 +24,141 @@
     <title>Frontend Mentor | Workit landing page</title>
   </head>
   <body>
-    <header>
+    <header id="header-section" class="header-section">
       <div class="container">
-        <ul class="header-nav">
-          <li>
-            <a href="#"></a
-            ><img src="./assets/images/logo-light.svg" alt="workit logo" />
-            <li><a href="#">Apply for access</a>
-            <div class="green-underline"></div></li>
-          </li>
-        </ul>
+        <!-- NAVIGATION -->
+        <nav>
+          <ul class="navigation">
+            <li>
+              <a href="#"
+                ><img src="./assets/images/logo-light.svg" alt="workit logo"
+              /></a>
+            </li>
 
-        <div class="header-text">
-          <h1>Data <span class="text-underline">tailored </span>to your needs.</h1>
+            <li>
+              <a href="#"><p>Apply for access</p></a>
+              <div class="nav-underline"></div>
+            </li>
+          </ul>
+        </nav>
+        <!-- HEADER CONTENT -->
+        <div class="header-content">
+          <div class="header-title">
+            <h1>
+              Data <span class="title-undlerline">tailored</span> to your needs.
+            </h1>
+          </div>
+
+          <div class="header-btn">
+            <button>Learn more</button>
+          </div>
         </div>
 
-        <button class="header-btn">Learn more</button>
-
-        <img class="hero-img" src="./assets/images/image-hero.webp" alt="smart phone">
-      </div>
-
-      <div class="hero-wave">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
-          ></path>
-        </svg>
+        <img
+          src="./assets/images/image-hero.webp"
+          alt="mobile phone"
+          class="header-hero-img"
+        />
       </div>
     </header>
 
-    <section id="features">
-      <div class="container">
-        <div class="features-flex-container">
-          <div class="feature">
-            <div class="feature-number">
-              <p>1</p>
-            </div>
-            <div class="feature-text">
-              <h2>Actionable insights</h2>
-            <p class="feature-p">Optimize your products, improve customer satisfaction and stay
-              ahead of the competition with our product data analytics.</p>
-            </div>
-            
-          </div>
+    <!-- HEADER WAVE -->
+    <div class="header-wave">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
 
-
-          <div class="feature">
-            <div class="feature-number">
-              <p>2</p>
+    <!-- MAIN CONTENT -->
+    <main id="main-section" class="main-section">
+      <section id="features-section">
+        <div class="container">
+          <!-- FEATURES -->
+          <div class="features-flex-container">
+            <div class="features-item">
+              <div class="features-number">
+                <p>1</p>
+              </div>
+              <div class="features-content">
+                <h3>Actionable insights</h3>
+                <p>
+                  Optimize your products, improve customer satisfaction and stay
+                  ahead of the competition with our product data analytics.
+                </p>
+              </div>
             </div>
-            <div class="feature-text">
-              <h2>Data-driven decisions</h2>
-              <p class="feature-p">Make data-driven decisions with our product data analytics. Our
-              AI-generated reports help you unlock insights hidden in your product data.</p>
+
+            <div class="features-item">
+              <div class="features-number">
+                <p>2</p>
+              </div>
+              <div class="features-content">
+                <h3>Data-driven decisions</h3>
+                <p>
+                  Make data-driven decisions with our product data analytics.
+                  Our AI-generated reports help you unlock insights hidden in
+                  your product data.
+                </p>
+              </div>
             </div>
 
-          </div>
-
-
-          <div class="feature">
-            <div class="feature-number">
-              <p>3</p>
-            </div>
-            <div class="feature-text">
-              <h2>Always affordable</h2>
-              <p class="feature-p">Always affordable pricing that scales with your business.
-              Get top-quality product data analytics services without hidden costs or
-              unexpected fees.</p>
+            <div class="features-item">
+              <div class="features-number">
+                <p>3</p>
+              </div>
+              <div class="features-content">
+                <h3>Always affordable</h3>
+                <p>
+                  Always affordable pricing that scales with your business. Get
+                  top-quality product data analytics services without hidden
+                  costs or unexpected fees.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="hero-wave">
+      </section>
+
+      <!-- FOUNDER -->
+      <section id="founder-section">
+        <div class="container">
+          <div class="founder-flex-container">
+            <img
+              src="./assets/images/image-founder.webp"
+              alt="founder headshot"
+              class="founder-img"
+            />
+
+            <div class="founder-card">
+              <div class="founder-content">
+                <h2>Be the first to test</h2>
+                <p>
+                  Hi, I'm Louis Graham, the founder of the company. Book a demo
+                  call with me to become a beta tester for our app and kickstart
+                  your company. Apply for access below and I’ll be in touch to
+                  schedule a call.
+                </p>
+                <button class="founder-btn">Apply for access</button>
+              </div>
+              <img
+                src="./assets/images/bg-pattern-3.svg"
+                alt="spiral"
+                class="founder-spiral"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MAIN WAVE -->
+      <div class="main-wave">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -110,34 +167,24 @@
         >
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="features-fill"
+            class="main-shape-fill"
           ></path>
         </svg>
       </div>
-    </section>
+    </main>
 
-    <section id="founder">
-      <div class="container">
-        <div class="founder-flex-container">
-          <img src="./assets/images/image-founder.webp" alt="founder picture" class="founder-img">
-          <div class="access-card">
-            <div class="access-card-content">
-              <h2>Be the first to test</h2>
-              <p>Hi, I'm Louis Graham, the founder of
-    the company. Book a demo call with me to become a beta tester for our app
-    and kickstart your company. Apply for access below and I’ll be in touch to
-    schedule a call.</p>
-    <button class="founder-btn">Apply for access</button> <img src="./assets/images/bg-pattern-3.svg" alt="" class="founder-circles">
-            </div>
+    <footer>
+      <section id="footer-section">
+        <div class="container">
+          <img src="./assets/images/logo-dark.svg" alt="" class="footer-logo" />
+
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </footer>
   </body>
 </html>
-
-<!-- 
-      
-      
-      
--->
